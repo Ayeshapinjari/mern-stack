@@ -1,21 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+
     <form action="submit">
         <label for="name">Name</label>
-        <input type="text"><br><br>
-        <label for="year">Year</label>
-        <input type="number"><br><br>
-        <label for="section">Section</label>
-        <input type="text"><br><br>
+        <input type="text" id="name" name="name" value="Ayesha" disabled>
         <label for="email">E-mail</label>
-        <input type="email" name="email" id="email"><br><br>
-        <button type="submit">register</button>
+        <input type="email" name="email" id="email" required>
+        <label for="phone">phone</label>
+        <input type="number" name="phone" id="phone">
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="dob" id="dob">
+        <label>
+            <input type="radio" name="gender" value="male">
+            Male
+        </label>
+        <label>
+            <input type="radio" name="gender" value="female">
+            Female
+        </label>
+        <label>
+            <input type="radio" name="gender" value="other">
+            Other
+        </label>
+        <label for="skills">skills</label>
+        <label>
+            <input type="checkbox" name="skills" value="html">
+            HTML
+        </label>
+        <label>
+            <input type="checkbox" name="skills" value="css">
+            CSS
+        </label>
+        <label>
+            <input type="checkbox" name="skills" value="js">
+            JS
+        </label>
+        <label>
+            <input type="checkbox" name="skills" value="react">
+            React
+        </label>
+        <label for="country">country</label>
+        <select name="country" id="country">country
+            <option value="india">india</option>
+            <option value="usa">usa</option>
+            <option value="uk">uk</option>
+        </select>
+        <input type="file" name="profile picture" id="pp">
+        <textarea name="about-you" id="about" rows="2" cols="30"> </textarea>
+        <button type="submit">submit</button>
+        <button type="reset">reset</button>
     </form>
-    </body>
+</body>
 </html>
