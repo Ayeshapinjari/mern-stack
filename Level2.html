@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+Page Structure
+Use:
+<header> (Site name + nav)
+<main>
+<section> for courses
+<section> for enrollment form
+<footer>
+Create a table with:
+Caption: "Available Courses"
+Columns:
+Course Name
+Instructor
+Duration
+Fee
+Add at least 3 courses.
+3️Enollment Form
+Include fields:
+Full Name (required)
+Email (required)
+Phone
+Select Course (dropdown from above courses)
+Mode (radio: Online / Offline)
+Skills (checkbox: HTML, CSS, JS)
+Message (textarea)
+Submit button
+-->
+
+<body>
+    <header>
+        <h1>Tech/Learn</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <table>
+                <caption>Available Courses</caption>
+                <thead>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Instructor</th>
+                        <th>Duration</th>
+                        <th>Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>web</td>
+                        <td>ayesha</td>
+                        <td>3 hrs</td>
+                        <td>10000</td>
+                    </tr>
+                    <tr>
+                        <td>cloud</td>
+                        <td>teju</td>
+                        <td>2 hrs</td>
+                        <td>5000</td>
+                    </tr>
+                    <tr>
+                        <td>java</td>
+                        <td>navi</td>
+                        <td>5 hrs</td>
+                        <td>20000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section>
+            <h2>Enrollment Form</h2>
+            <form action="">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" id="name" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="phone">Phone</label>
+                <input type="number" name="phone" id="phone">
+                <label for="course">Select course</label>
+                <select name="course" id="course">
+                    <option value="web">Web</option>
+                    <option value="cloud">Cloud</option>
+                    <option value="java">Java</option>
+                </select>
+                <label for="mode">Mode</label>
+                <label>
+                    <input type="radio" name="mode" value="online">
+                    Online
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="offline">
+                    Offline
+                </label>
+                <label for="skills">Skills</label>
+                <label>
+                    <input type="checkbox" name="skills" value="HTML">
+                    HTML
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="CSS">
+                    CSS
+                </label>
+                <label>
+                    <input type="checkbox" name="skills" value="JS">
+                    JS
+                </label>
+                <textarea name="message" id="msg" rows="3" cols="30">enter message</textarea>
+                <button type="submit">submit</button>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>copyright 2026</p>
+    </footer>
+</body>
+
+</html>
