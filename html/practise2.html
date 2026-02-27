@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS practise</title>
-    <link rel="stylesheet" href="css\Practise.css">
+    <link rel="stylesheet" href="Practise.css">
+    <style>
+
+</style>
 </head>
 <body>
     <h1>Ayesha Pinjari</h1>
-    <p>I am a passionate learner. I focus on clean code and user-friendly design</p>
-    <button>contact me</button>
+    <p id="text">this is a paragraph </p>
+    <button id="btn">contact me</button>
+    <script>
+        const text=document.getElementById('text')
+        text.addEventListener('mouseover',()=>
+    {
+        box.innerHTML="changed text using DOM "
+    });
+        document.getElementById('btn').addEventListener('click',()=>{
+            alert("clicked")
+        }
+    )
+    </script>
 </body>
 </html>

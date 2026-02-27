@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="RPS.css">
+    <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/a83d304829.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+<body>
+     <!-- rock paper scissors game -->
+    <h1>Rock paper Scissors</h1>
+    <h2>select a choice</h2>
+    <div id="play">
+        <button onclick="play('rock')"><i class="fa-solid fa-hand-back-fist" style="color: rgb(255, 212, 59);"></i> Rock</button>
+    <button onclick="play('paper')"><i class="fa-solid fa-hand" style="color: rgb(255, 212, 59);"></i> Paper</button>
+    <button onclick="play('scissors')"><i class="fa-solid fa-hand-scissors" style="color: rgb(255, 212, 59);"></i> Scissors</button>
+    </div>
+    <div id="res">
+        <h3>leader board</h3>
+        <h3 id="result"></h3>
+    <h3 id="score"></h3>
+    </div>
+    <script>
+        let us=0;
+        let cs=0;
+        function play(u){
+            const choice=['rock','paper','scissors']
+            let c=choice[Math.floor(Math.random()*3)]// it give nearest num like 0.33*3 1.64 it give 1
+            if(u===c){
+                resultText=`${c} it's a draw`
+            }
+            else if((u==='rock'&& c==='scissors')|| (u==='paper'&& c==='rock')|| (u==='scissors'&& c==='paper')){
+                resultText='you won 🏆'
+                us++
+
+            }
+            else  {
+                resultText=`${c} you lost 👎`
+                cs++
+            }
+            
+            document.getElementById('result').innerText=resultText
+            document.getElementById('score').innerText=`your score ${us} computer score ${cs}`
+
+        }
+        
+
+    </script>
+</body>
+</html>
